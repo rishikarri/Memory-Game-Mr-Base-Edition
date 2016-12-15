@@ -1,0 +1,42 @@
+
+
+.memoryGame-slot-holder-inner{
+	height: 300px;
+	border: solid black 1px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 2s;
+	margin: 10px;
+}
+
+.frontCard, .backCard{
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+img{
+	height: 170px;
+}
+
+.frontCard{
+	/* frontcard - card with mr base is facing back */
+	transform: rotateY(180deg);
+}
+
+.backCard{
+	height: 300px;
+
+	/* backcard is facing front */
+	background: url('Images/images.jpeg');
+}
+
+
+.flip{
+	/* flip it when you click */
+	transform: rotateY(180deg);
+}
+

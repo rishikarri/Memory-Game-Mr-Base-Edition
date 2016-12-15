@@ -1,0 +1,46 @@
+img{
+	max-width: 100%;
+}
+
+.mg-tile{
+	height: 300px;
+	min-width: 300px;
+	border: 2px solid black;
+	perspective: 500px;
+}
+
+.mg-tile-inner{
+	width: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+	/* //keep it threeD^ */
+	transition: all 1s;
+
+}
+
+/* comma - will apply to both. if you remove the comma it will apply to mg back inside mg front. If you go .mg-front.mg-back will apply to something with both of them */
+.container .mg-front, .mg-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 2px solid red;
+	backface-visibility: hidden;
+
+}
+
+/* Flip the front of the card face down */
+.mg-front{
+	transform: rotateY(180deg);
+}
+
+.mg-back{
+	background: url('image2.png') no-repeat 50% 50%;
+	width: 300px;
+	height: 200px;
+
+}
+
+.flip, .matched{
+	transform: rotateY(-180deg);
+}
+
